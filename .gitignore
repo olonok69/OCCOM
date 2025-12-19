@@ -152,6 +152,7 @@ frontend/static/*
 docker-compose.yml
 CHANGES.md
 docs/
-.lock
-.docx
-.doc
+*.lock
+*.docx
+*.doc
+*.pdf
