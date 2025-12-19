@@ -1,0 +1,58 @@
+{
+  "current_version": "2.0.4",
+  "changelog": [
+    {
+      "version": "2.0.0",
+      "date": "2025-11-21",
+      "label": "Initial Release",
+      "features": [
+        "Feature - Chat bot functionality with AI-powered responses",
+        "Feature - Recent Searches functionality showing five most recent search prompts",
+        "Feature - Send Feedback functionality to contact AI development team",
+        "Feature - Reference Guide web page with bot usage details",
+        "Feature - Download chat history as Word document with citation links",
+        "Feature - Role-based permissions system (User, Admin, Super Admin)",
+        "Feature - User role with chat-only permissions",
+        "Feature - Admin role with upload/view/delete files and statistics access",
+        "Feature - Super Admin role with FAQ configuration, logo, and user/bot icon management"
+      ],
+      "bugfixes": []
+    },
+    {
+      "version": "2.0.1",
+      "date": "2025-11-26",
+      "features": [],
+      "bugfixes": [
+        "Bugfix - Performance issues resolved with app service plan upscaling configuration and application performance fixes"
+      ]
+    },
+    {
+      "version": "2.0.2",
+      "date": "2025-11-28",
+      "features": [
+        "Feature - Performance improvements supporting 50 concurrent users with improved response times"
+      ],
+      "bugfixes": []
+    },
+    {
+      "version": "2.0.3",
+      "date": "2025-12-05",
+      "features": [],
+      "bugfixes": [
+        "Bugfix - Performance improvements to address timeout issues, including PDF call caching optimizations"
+      ]
+    },
+    {
+      "version": "2.0.4",
+      "date": "2025-12-11",
+      "features": [
+        "Feature - Added external links",
+        "Feature - Added change log",
+        "Improvement - Reducing rerun to avoid refreshing some parts of the page"
+      ],
+      "bugfixes": [
+        "Bugfix - Fixing timeout errors"
+      ]
+    }
+  ]
+}

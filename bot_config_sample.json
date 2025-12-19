@@ -1,0 +1,48 @@
+{
+  "has_filters": false,
+  "filters": {
+    "filter_1": "category",
+    "filter_2": "sub_category"
+  },
+  "required_headers": [
+    "file_name",
+    "category",
+    "sub_category"
+  ],
+  "filter_mapping": {
+    "AI": [
+      "Computer Vision",
+      "NLP"
+    ],
+    "PSD": [
+      "Equity Funds",
+      "Investments"
+    ]
+  },
+  "look_and_feel": {
+    "bot_name": "BIAB V2.0",
+    "about_text": "This is the second version of your beloved BIAB bot.",
+    "welcome_message": "Hi! How can I assist you today?",
+    "default_response": "I'm sorry, I didn't understand that. Could you please rephrase?",
+    "background_image_path": "frontend/static/image.jpg",
+    "logo_image_path": "frontend/static/logo.png",
+    "bot_icon_path": "frontend/static/bot_icon.png",
+    "user_icon_path": "frontend/static/user_icon.png",
+    "primary_color": "#3498db",
+    "secondary_color": "#2ecc71",
+    "font_family": "Arial, sans-serif",
+    "font_size": "14px",
+    "text_color": "#333333"
+  },
+  "feedback_contact_name": "John Doe",
+  "feedback_contact_email": "john.doe@example.com",
+  "faq": [
+    "How do I upload documents?",
+    "Why is my file still processing?",
+    "Can I chat while files are processing?",
+    "What file types are supported?",
+    "How do I clear my chat history?",
+    "Is my data secure?"
+  ],
+  "prompt_template": "Based on the following context from various documents, please answer the question comprehensively and accurately.\n\nContext:\n{context}\n\nQuestion: {question}\n\nInstructions:\n- Provide a detailed and informative answer based on the context\n- If specific projects, numbers, or details are mentioned, include them\n- If the context doesn't fully answer the question, mention what information is available\n- Be precise and cite relevant information from the sources\n\nAnswer:"
+}

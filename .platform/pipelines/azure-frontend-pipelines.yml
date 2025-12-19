@@ -1,0 +1,45 @@
+trigger:
+  - main
+
+pool:
+  name: alz-mgmt
+
+resources:
+  repositories:
+    - repository: app-templates-pipeline
+      type: git
+      name: AI/app-templates-pipeline
+      ref: refs/heads/main
+
+extends:
+  template: frontend-template.yaml@app-templates-pipeline
+  parameters:
+    imageName: "ai-apps-bot/biabv2fe"
+    environment: "dev"
+    context: $(Build.SourcesDirectory)/frontend
+    cliSources: $(Build.SourcesDirectory)/frontend
+    nexusIqScanTarget: "$(Build.SourcesDirectory)/frontend/**/*.py,$(Build.SourcesDirectory)/frontend/**/*.toml,$(Build.SourcesDirectory)/frontend/**/requirements.txt"
+    applicationId: "biabv2fe"
+    cliProjectKey: "biabv2fe"
+    RunCodeScanningForNonMain: true
+    cicdEnabledApps:
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-biabv2fedemo-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-biabv2fedemo-1
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-opsmanualfe-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-opsmanualfe-1
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-lessonsinvestigationfe-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-lessonsinvestigationfe-1
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-ogcfe-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-ogcfe-1
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-smefinopsfe-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-smefinopsfe-1
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-privateequityfe-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-privateequityfe-1
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-digitalhubfe-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-digitalhubfe-1
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-esgreenfe-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-esgreenfe-1
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-ppadfe-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-ppadfe-1
+      - /subscriptions/96520e06-0da2-4982-9cfd-c9cafa0c6b25/resourceGroups/rg-apps-dev-uks-web-1/providers/Microsoft.Web/sites/app-apps-dev-uks-financialextractorfe-1
+      - /subscriptions/1df71f88-1333-4939-8ad3-0a4f38dab517/resourceGroups/rg-apps-qua-uks-web-1/providers/Microsoft.Web/sites/app-apps-qua-uks-financialextractorfe-1

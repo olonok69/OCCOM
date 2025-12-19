@@ -1,0 +1,33 @@
+{
+  "has_filters": false,
+  "filters": {},
+  "required_headers": [],
+  "filter_mapping": {},
+  "look_and_feel": {
+    "bot_name": "Document Chatbot v2",
+    "version": "1.0.1",
+    "language": "en",
+    "about_text": "BIAB v2",
+    "disclaimer_text": "AI can make mistakes, please check and validate the answers with references.",
+    "primary_color": "#30ff00",
+    "secondary_background_color": "#cecece",
+    "background_color": "#FFFFFF",
+    "text_color": "#000000",
+    "font_family": "Arial, sans-serif",
+    "font_size": "14px",
+    "welcome_message": "Hi! How can I assist you today?",
+    "default_response": "I'm sorry, I didn't understand that. Could you please rephrase?"
+  },
+  "feedback_contact_name": "test name",
+  "feedback_contact_email": "test@example.com",
+  "faq": [
+    "Q1",
+    "Q2",
+    "Q3"
+  ],
+  "prompt_template": "Based on the following context from various documents, please answer the question comprehensively and accurately.\n\nContext:\n{context}\n\nQuestion: {question}\n\nInstructions:\n- Provide a detailed and informative answer based on the context\n- If specific projects, numbers, or details are mentioned, include them\n- If the context doesn't fully answer the question, mention what information is available\n- Be precise and cite relevant information from the sources\n\nAnswer:",
+  "version": null,
+  "language": null,
+  "about_text": null,
+  "disclaimer_text": null
+}

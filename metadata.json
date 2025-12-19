@@ -1,0 +1,13 @@
+{
+    "file_name": "file_name",
+    "report_name": "report_name",
+    "category": "category",
+    "geographical_area": "geographical_area",
+    "published_year": "published_year",
+    "period_covered_by_report": "period_covered_by_report",
+    "owner": "owner",
+    "owner_id": "owner_id",
+    "filters": {
+        "category": ""
+    }
+}
